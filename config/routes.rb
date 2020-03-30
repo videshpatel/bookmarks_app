@@ -12,5 +12,10 @@ Rails.application.routes.draw do
     get "/bookmarks/:id" => "bookmarks#show"
     patch "/bookmarks/:id" => "bookmarks#update"
     delete "/bookmarks/:id" => "bookmarks#destroy"
+
+    post "/users" => "users#create"
+
+    post "/sessions" => "sessions#create"
+
   end
 end

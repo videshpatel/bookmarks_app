@@ -1,5 +1,6 @@
 class Api::BookmarksController < ApplicationController
 
+before_action :authenticate_user, only: [:index, :show, :create, :update, :destroy]
   def index
     @bookmarks = Bookmark.all
     render "index.json.jbuilder"

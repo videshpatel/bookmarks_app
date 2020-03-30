@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-    Bookmark.create(category: "123", name: "Google.com", url: "Google Front Page.")
-    Bookmark.create(category: "123", name: "Yahoo.com", url: "Yahoo Front page.")
-    Bookmark.create(category: "Home", name: "Lycos.com", url: "Lycos Front page.")
-    Bookmark.create(category: "", name: "CNN.com", url: "CNN Front page.")    
-    Bookmark.create(category: "Friend", name: "Reddit.com", url: "Reddit Front page.")
+    Bookmark.create(category: "123", name: "Somesite.com", url: "Somesite Front Page.")
+    Bookmark.create(category: "123", name: "Anothersite.com", url: "Anothersite Front page.")
+    Bookmark.create(category: "Home", name: "andanothersite.com", url: "andanothersite Front page.")
+    Bookmark.create(category: "", name: "site666.com", url: "site666 Front page.")    
+    Bookmark.create(category: "Friend", name: "Dontknow.com", url: "Dontknow Front page.")
