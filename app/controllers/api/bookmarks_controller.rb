@@ -8,9 +8,11 @@ before_action :authenticate_user, only: [:index, :show, :create, :update, :destr
 
   def create
     @bookmark = Bookmark.new(
-      category: params[:category],
-      name: params[:name],
-      url: params[:url]
+      description: params[:description],
+      url: params[:url],
+      notes: params[:notes]
+      category_id: params[:category_id]
+      user_id: params[:user_id]
     )
     @bookmark.save
     render "show.json.jbuilder"
@@ -23,9 +25,11 @@ before_action :authenticate_user, only: [:index, :show, :create, :update, :destr
 
   def update
     @bookmark = Bookmark.find_by(id: params[:id])
-    @bookmark.category = params[:category] || @bookmark.category
-    @bookmark.name = params[:name] || @bookmark.name
+    @bookmark.description = params[:description] || @bookmark.description
     @bookmark.url = params[:url] || @bookmark.url
+    @bookmark.notes = params[:notes] || @bookmark.notes
+    @bookmark.category_id = params[:category_id] || @bookmark.category_id
+    @bookmark.user_id = params[:user_id] || @bookmark.user_id
     @bookmark.save
     render "show.json.jbuilder"
   end
