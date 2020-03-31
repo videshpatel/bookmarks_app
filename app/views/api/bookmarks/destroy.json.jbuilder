@@ -1,1 +1,1 @@
-json.message "The product is deleted from the database."
+json.message "The bookmark is deleted from the database."

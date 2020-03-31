@@ -13,6 +13,12 @@ Rails.application.routes.draw do
     patch "/bookmarks/:id" => "bookmarks#update"
     delete "/bookmarks/:id" => "bookmarks#destroy"
 
+    get "/categories" => "categories#index"
+    post "/categories" => "categories#create"
+    get "/categories/:id" => "categories#show"
+    patch "/categories/:id" => "categories#update"
+    delete "/categories/:id" => "categories#destroy"
+
     post "/users" => "users#create"
 
     post "/sessions" => "sessions#create"
